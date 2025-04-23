@@ -132,24 +132,30 @@ public class AjaxController {
 	}
 	
 	// 할 일 삭제 요청(DELETE)
-	@ResponseBody
+	@ResponseBody 
 	@DeleteMapping("delete")
-	public int todoDelete(@RequestBody int todoNo) {	
+	public int todoDelete(@RequestBody int todoNo) {
 		return service.todoDelete(todoNo);
 	}
 	
+	// 완료 여부 변경(PUT)
 	@ResponseBody
 	@PutMapping("changeComplete")
-	// 완료 여부 변경(PUT)
 	public int changeComplete(@RequestBody Todo todo) {
 		return service.changeComplete(todo);
 	}
 	
-	// 할 일 수정(PUT)
 	
+	// 할 일 수정(PUT)
 	@ResponseBody
 	@PutMapping("update")
 	public int todoUpdate(@RequestBody Todo todo) {
 		return service.todoUpdate(todo);
 	}
+	
+	
+	
+	
+	
+	
 }

@@ -1,11 +1,11 @@
 .container {
-    width: 50vw;
-    height: 400px;
-    margin: auto;
-    background-color: skyblue;
+  width: 50vw;
+  height: 400px;
+  margin: auto;
+  background-color: skyblue;
 }
 
 .container img {
-    width: 19%;
-    height: auto;
+  width: 19%;
+  height: auto;
 }
