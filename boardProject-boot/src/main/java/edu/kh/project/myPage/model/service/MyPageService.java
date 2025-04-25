@@ -6,7 +6,7 @@ import java.util.Map;
 import org.springframework.web.multipart.MultipartFile;
 
 import edu.kh.project.member.model.dto.Member;
-import edu.kh.project.myPage.moel.dto.UploadFile;
+import edu.kh.project.myPage.model.dto.UploadFile;
 
 public interface MyPageService {
 
@@ -38,7 +38,6 @@ public interface MyPageService {
 	String fileUpload1(MultipartFile uploadFile) throws Exception;
 
 	/** 파일 업로드 테스트 2
-	 * 
 	 * @param uploadFile
 	 * @param memberNo
 	 * @return
@@ -46,10 +45,27 @@ public interface MyPageService {
 	int fileUpload2(MultipartFile uploadFile, int memberNo) throws Exception;
 
 	/** 파일 목록 조회
-	 * 
 	 * @param memberNo
 	 * @return
 	 */
 	List<UploadFile> fileList(int memberNo);
+
+	/** 여러파일 업로드 서비스
+	 * @param aaaList
+	 * @param bbbList
+	 * @param memberNo
+	 * @return
+	 * @throws Exception
+	 */
+	int fileUpload3(List<MultipartFile> aaaList, 
+					List<MultipartFile> bbbList, 
+					int memberNo) throws Exception;
+
+	/** 프로필 이미지 수정 서비스
+	 * @param profileImg
+	 * @param loginMember
+	 * @return
+	 */
+	int profile(MultipartFile profileImg, Member loginMember) throws Exception;
 
 }
